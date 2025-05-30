@@ -1,0 +1,245 @@
+.skills-section {
+  margin-top: 2rem;
+  background: rgba(30,30,30,0.5);
+  border-radius: 16px;
+  padding: 1.2rem 1.2rem 1rem 1.2rem;
+  box-shadow: 0 0 0 1px #333;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.skills-carousel-container {
+  background: rgba(30,30,30,0.5);
+  padding: 0.7rem;
+  margin-top: 0.3rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.skills-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 3;
+  padding: 0.4rem 0.7rem;
+  backdrop-filter: blur(10px);
+}
+
+.skills-carousel-container::before,
+.skills-carousel-container::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  z-index: 4;
+  pointer-events: none;
+  height: 100%;
+  top: 0;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.4rem;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: calc(200% + 1.4rem);
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  
+  /* Animation with browser prefixes */
+  -webkit-animation: infiniteScroll 20s linear infinite;
+  -moz-animation: infiniteScroll 20s linear infinite;
+  -o-animation: infiniteScroll 20s linear infinite;
+  animation: infiniteScroll 20s linear infinite;
+}
+
+.skills-grid svg {
+  height: 62px;
+  width: 62px;
+  color: #fff;
+  background: rgba(24,24,24,0.8);
+  padding: 11px;
+  box-shadow: 0 2px 8px rgba(16,185,129,0.08);
+  transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 9px;
+}
+
+.skills-grid svg:nth-child(1):hover { color: #f7df1e; transform: scale(1.1); }
+.skills-grid svg:nth-child(2):hover { color: #e34f26; transform: scale(1.1); }
+.skills-grid svg:nth-child(3):hover { color: #1572b6; transform: scale(1.1); }
+.skills-grid svg:nth-child(4):hover { color: #0175c2; transform: scale(1.1); }
+.skills-grid svg:nth-child(5):hover { color: #dd0031; transform: scale(1.1); }
+.skills-grid svg:nth-child(6):hover { color: #61dafb; transform: scale(1.1); }
+.skills-grid svg:nth-child(7):hover { color: #02569b; transform: scale(1.1); }
+.skills-grid svg:nth-child(8):hover { color: #7952b3; transform: scale(1.1); }
+.skills-grid svg:nth-child(9):hover { color: #21759b; transform: scale(1.1); }
+.skills-grid svg:nth-child(10):hover { color: #47a248; transform: scale(1.1); }
+.skills-grid svg:nth-child(11):hover { color: #00758f; transform: scale(1.1); }
+.skills-grid svg:nth-child(12):hover { color: #777bb4; transform: scale(1.1); }
+.skills-grid svg:nth-child(13):hover { color: #000000; transform: scale(1.1); }
+.skills-grid svg:nth-child(14):hover { color: #339933; transform: scale(1.1); }
+.skills-grid svg:nth-child(15):hover { color: #000000; transform: scale(1.1); }
+.skills-grid svg:nth-child(16):hover { color: #646cff; transform: scale(1.1); }
+.skills-grid svg:nth-child(17):hover { color: #38bdf8; transform: scale(1.1); }
+
+/* Keyframe animations with browser prefixes */
+@-webkit-keyframes infiniteScroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@-moz-keyframes infiniteScroll {
+  0% {
+    -moz-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@-o-keyframes infiniteScroll {
+  0% {
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.skills-generic-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 62px;
+  width: 62px;
+  background: #181818;
+  border-radius: 11px;
+  padding: 11px;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(16,185,129,0.08);
+  transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+  text-align: center;
+  animation: infiniteScroll 25s linear infinite;
+}
+
+.skills-generic-icon:hover {
+  color: #10B981;
+  background: #232323;
+  transform: scale(1.15) rotate(-3deg);
+  box-shadow: 0 4px 22px #10B98144;
+}
+
+.resume-link-btn {
+  background: none;
+  color: #10B981;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: underline;
+  display: inline;
+  margin: 0;
+}
+
+.resume-link-btn:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+.resume-link-btn:active {
+  color: #10B981;
+}
+
+/* Mobile only responsive fixes */
+@media (max-width: 768px) {
+  .skills-section {
+    margin-top: 1.2rem;
+    padding: 0.8rem;
+    border-radius: 12px;
+  }
+  
+  .skills-carousel-container {
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+  }
+  
+  .skills-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.65rem;
+    padding: 0.3rem 0.55rem;
+  }
+  
+  .skills-carousel-container::before,
+  .skills-carousel-container::after {
+    width: 60px;
+  }
+  
+  .skills-grid {
+    gap: 0.9rem;
+    height: 55px;
+    width: calc(200% + 0.9rem);
+    -webkit-animation: infiniteScroll 15s linear infinite;
+    -moz-animation: infiniteScroll 15s linear infinite;
+    -o-animation: infiniteScroll 15s linear infinite;
+    animation: infiniteScroll 15s linear infinite;
+  }
+  
+  .skills-grid svg {
+    height: 44px;
+    width: 44px;
+    padding: 7px;
+  }
+  
+  .skills-generic-icon {
+    height: 44px;
+    width: 44px;
+    padding: 7px;
+    font-size: 0.85rem;
+  }
+  
+  .skills-generic-icon:hover {
+    transform: scale(1.1) rotate(-2deg);
+  }
+}
