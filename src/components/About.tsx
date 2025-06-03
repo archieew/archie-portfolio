@@ -14,7 +14,6 @@ const About = () => {
 
   return (
     <div>
-      {/* Test: Render a single icon at the top to debug visibility */}
       Hey! I'm Archie Custodio and I graduated from <a href="https://www.hau.edu.ph/" target="_blank" rel="noopener noreferrer" style={{ color: "#10B981", textDecoration: "underline" }}> Holy Angel University</a> with a degree of Bachelor of Science in Information Technology with specialization in Web Development. I am a passionate full-stack developer who loves building clean, user-friendly web apps. I'm always excited to take on new challenges that help me grow and make an impact.  I'm confident in using tools like ReactJS, AngularJS, ViteJS, ExpressJS, NodeJS, and Figma and always up for learning more. Also you can download my resume <button className="resume-link-btn" onClick={handleResumeClick}>here</button>.
       <br /><br />
       I've worked on real projects during my internship at 
@@ -26,25 +25,8 @@ const About = () => {
       <div className="skills-section">
         <div className="skills-title">⚡ Stacks</div>
         <div className="skills-carousel-container">
-        <div className="skills-grid">
-          <SiJavascript title="JavaScript" />
-          <SiHtml5 title="HTML5" />
-          <SiCss3 title="CSS3" />
-          <SiDart title="Dart" />
-          <SiAngular title="AngularJS" />
-          <SiReact title="ReactJS" />
-          <SiFlutter title="Flutter" />
-          <SiBootstrap title="Bootstrap" />
-          <SiWordpress title="Wordpress" />
-          <SiMongodb title="MongoDB" />
-          <SiMysql title="MySQL" />
-          <SiPhp title="PHP" />
-          <SiFlask title="Flask" />
-          <SiNodedotjs title="NodeJS" />
-          <SiExpress title="ExpressJS" />
-          <SiVite title="ViteJS" />
-          <SiTailwindcss title="TailwindCSS" />
-            {/* Duplicate for seamless loop */}
+          <div className="skills-grid">
+            {/* 3x full set for seamless loop */}
             <SiJavascript title="JavaScript" />
             <SiHtml5 title="HTML5" />
             <SiCss3 title="CSS3" />
@@ -68,15 +50,8 @@ const About = () => {
       <div className="skills-section">
         <div className="skills-title">🧰 Tool Kits</div>
         <div className="skills-carousel-container">
-        <div className="skills-grid">
-          <SiAdobephotoshop title="Adobe Photoshop" />
-          <SiAdobepremierepro title="Adobe Premiere" />
-          <SiAdobeillustrator title="Adobe Illustrator" />
-          <SiCanva title="Canva" />
-          <SiFigma title="Figma" />
-          <SiGit title="Git" />
-          <SiGithub title="Github" />
-            {/* Duplicate for seamless loop */}
+          <div className="skills-grid">
+            {/* 3x full set for seamless loop */}
             <SiAdobephotoshop title="Adobe Photoshop" />
             <SiAdobepremierepro title="Adobe Premiere" />
             <SiAdobeillustrator title="Adobe Illustrator" />
@@ -84,6 +59,7 @@ const About = () => {
             <SiFigma title="Figma" />
             <SiGit title="Git" />
             <SiGithub title="Github" />
+           
           </div>
         </div>
       </div>

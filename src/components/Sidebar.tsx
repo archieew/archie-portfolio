@@ -2,7 +2,7 @@ import "./styles/Sidebar.css";
 import profileImg from "../assets/profile.jpg"; 
 import { FaGithub, FaMapMarkerAlt, FaLinkedin, FaGlobe, FaBriefcase, FaTwitter, FaSuitcase, FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import logo from "../assets/Asset 1.png"; // Adjust the path and filename as needed
+import logo from "../assets/Asset 1.png";
 
 const Sidebar = () => (
   <aside className="sidebar">

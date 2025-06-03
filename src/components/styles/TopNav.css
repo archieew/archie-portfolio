@@ -3,25 +3,25 @@
   justify-content: space-between;
   align-items: flex-end;
   border-radius: 0 24px 0 0;
-  padding: 0;
-  min-height: 60px;
+  padding: 1.5rem 0;
+  min-height: 90px;
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   width: 100%;
   gap: 1rem;
 }
 
 .topnav-left {
   color: #10B981;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 900;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 8px rgba(16,185,129,0.08);
+  text-shadow: 0 2px 12px rgba(16,185,129,0.3);
   display: flex;
   align-items: center;
-  min-height: 60px;
-  padding-left: 1.5rem;
+  min-height: 90px;
+  padding-left: 2.5rem;
   position: relative;
   gap: 0.75rem;
   flex-shrink: 0;
@@ -35,10 +35,11 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 6px;
+  width: 8px;
   height: 70%;
-  background: #10B981;
-  border-radius: 3px;
+  background: linear-gradient(180deg, #10B981 0%, #38bdf8 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(16,185,129,0.5);
 }
 
 .topnav-tabs {
@@ -52,9 +53,9 @@
   background: transparent;
   border: none;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  padding: 1rem 1.5rem 0.8rem 1.5rem;
+  padding: 1.2rem 1.8rem 1rem 1.8rem;
   margin: 0 0.1rem;
   border-radius: 12px 12px 0 0;
   cursor: pointer;
@@ -91,27 +92,35 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 900;
   letter-spacing: 1px;
   display: inline-block;
   white-space: nowrap;
+  filter: drop-shadow(0 2px 4px rgba(16,185,129,0.3));
 }
 
 /* Tablet responsive design */
 @media (max-width: 1024px) {
+  .topnav {
+    min-height: 75px;
+    padding: 0.8rem 0;
+  }
+  
   .topnav-left {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     max-width: 55%;
+    min-height: 75px;
+    padding-left: 1.8rem;
   }
   
   .gradient-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   
   .topnav button {
-    font-size: 0.95rem;
-    padding: 0.9rem 1.2rem 0.7rem 1.2rem;
+    font-size: 1rem;
+    padding: 1.1rem 1.5rem 0.9rem 1.5rem;
   }
 }
 
@@ -119,68 +128,130 @@
 @media (max-width: 768px) {
   .topnav {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
-    margin-bottom: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem 0.2rem 1.2rem;
+    margin-bottom: 0.1rem;
+    min-height: auto;
+    position: relative;
+    z-index: 10;
   }
   
   .topnav-left {
-    font-size: 1.3rem;
-    padding-left: 1rem;
-    gap: 0.5rem;
-    width: 100%;
+    font-size: 1.4rem;
+    margin-bottom: 0.1rem;
+    padding-left: 0;
+    min-height: auto;
     max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  
-  .gradient-title {
-    font-size: 1.3rem;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   
   .topnav-tabs {
     width: 100%;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.2rem;
+    gap: 0.7rem;
+    display: flex;
   }
   
   .topnav button {
-    font-size: 0.85rem;
-    padding: 0.7rem 0.8rem;
-    flex: 1;
-    min-width: 0;
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    min-width: 80px;
+    min-height: 38px;
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
+  }
+  
+  .topnav button.active {
+    background: #181f1b;
+    color: #10B981;
+    font-weight: 700;
+    box-shadow: 0 2px 12px #10B98133;
+    border: 1.5px solid #10B981;
+  }
+  
+  .topnav button:not(.active):hover {
+    background: #232323;
+    color: #10B981;
+    box-shadow: 0 2px 12px #10B98133;
+    border: 1.5px solid #38bdf8;
+  }
+  
+  .gradient-title {
+    font-size: 1.4rem;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  .topnav-left::before {
+    display: none;
   }
 }
 
 /* Small mobile responsive design */
 @media (max-width: 480px) {
+  .topnav {
+    padding: 0.4rem 0.7rem 0.1rem 0.7rem;
+    gap: 0.3rem;
+    margin-bottom: 0;
+  }
+  
   .topnav-left {
     font-size: 1.1rem;
+    padding-left: 0;
+    margin-bottom: 0.05rem;
   }
   
   .gradient-title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+  }
+  
+  .topnav-tabs {
+    gap: 0.5rem;
   }
   
   .topnav button {
-    font-size: 0.8rem;
-    padding: 0.6rem 0.6rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.7rem;
+    border-radius: 7px;
+    min-width: 65px;
+    min-height: 34px;
   }
 }
 
 /* Very small screens */
 @media (max-width: 360px) {
+  .topnav {
+    padding: 0.2rem 0.3rem 0.05rem 0.3rem;
+    gap: 0.15rem;
+    margin-bottom: 0;
+  }
+  
   .topnav-left {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    padding-left: 0;
+    margin-bottom: 0.02rem;
   }
   
   .gradient-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .topnav-tabs {
+    gap: 0.3rem;
   }
   
   .topnav button {
-    font-size: 0.75rem;
-    padding: 0.5rem 0.4rem;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 6px;
+    min-width: 50px;
+    min-height: 28px;
   }
 }

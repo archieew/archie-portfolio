@@ -137,7 +137,7 @@ const projects = [
     github: "https://github.com/archieew/Dental_Website",
     galleryImages: [dentalWebsite, dentalWebsite2, dentalWebsite3, dentalWebsite4, dentalWebsite5, dentalWebsite6, dentalWebsite7],
     },
-// Add more projects here following the same structure
+
 ];
 
 const Projects = () => {

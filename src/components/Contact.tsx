@@ -31,82 +31,82 @@ interface Certificate {
 
 const CERTS_PER_PAGE = 16;
 
-// Add your certificates here
+
 const certificates: Certificate[] = [
   {
     id: 1,
     title: "Certificate Title",
-    image: Cert1, // Replace with your image path
+    image: Cert1, 
     issuer: "Issuing Organization",
     date: "Date Received"
   },
   {
     id: 2,
     title: "Certificate Title",
-    image: Cert2, // Replace with your image path
+    image: Cert2,
     issuer: "Issuing Organization",
     date: "Date Received"
   },
   {
     id: 3,
     title: "Certificate Title",
-    image: Cert3, // Replace with your image path
+    image: Cert3,
     issuer: "Issuing Organization",
     date: "Date Received"
   },
   {
     id: 4,
     title: "Certificate Title",
-    image: Cert4, // Replace with your image path
+    image: Cert4,
     issuer: "Issuing Organization",
     date: "Date Received"
   },
   {
     id: 5,
     title: "Certificate Title",
-    image: Cert5, // Replace with your image path
+    image: Cert5,
     issuer: "Issuing Organization",
     date: "Date Received"
   },
   {
     id: 6,
     title: "Certificate Title",
-    image: Cert6, // Replace with your image path
+    image: Cert6,
     issuer: "Issuing Organization",
     date: "Date Received"
   },
   {
     id: 7,
     title: "Certificate Title",
-    image: Cert7, // Replace with your image path
+    image: Cert7,
     issuer: "Issuing Organization",
     date: "Date Received"
   },
   {
     id: 8,
     title: "Certificate Title",
-    image: Cert8, // Replace with your image path
+    image: Cert8,
     issuer: "Issuing Organization",
     date: "Date Received"
   },
   {
     id: 9,
     title: "Certificate Title",
-    image: Cert9, // Replace with your image path
+    image: Cert9,
     issuer: "Issuing Organization",
     date: "Date Received"
   },
   {
     id: 10,
     title: "Certificate Title",
-    image: Cert10, // Replace with your image path
+    image: Cert10,
     issuer: "Issuing Organization",
     date: "Date Received"
   },
   {
     id: 11,
     title: "Certificate Title",
-    image: Cert11, // Replace with your image path
+    image: Cert11,
     issuer: "Issuing Organization",
     date: "Date Received"
   },

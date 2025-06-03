@@ -54,7 +54,7 @@ body, #root {
   box-shadow: 0 4px 32px rgba(0,0,0,0.12);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   transform: scale(0.9);
   transform-origin: top center;
   min-height: 600px;
@@ -76,6 +76,12 @@ body, #root {
   flex-direction: column;
   overflow: hidden;
   transition: opacity 0.2s ease, transform 0.2s ease;
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto;
+  padding-top: 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .fadeIn {
@@ -187,6 +193,7 @@ h1.page-title {
     height: auto;
     min-height: 100%;
     overflow-y: auto;
+    padding-top: 1rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -415,6 +422,7 @@ h1.page-title {
     height: auto;
     min-height: 100%;
     overflow-y: auto;
+    padding-top: 1rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
