@@ -56,6 +56,7 @@ const projects = [
   {
     title: "Blockchain-Voting-App",
     mainImage: bvc2,
+    description: "A decentralized voting application built on blockchain technology ensuring transparency, security, and immutable voting records. Features wallet integration, smart contract-based vote counting, and real-time results display. This project demonstrates the potential of blockchain in creating tamper-proof democratic systems.",
     tech: [
       <SiHtml5 className="tech-icon" color="#E44D26" />, 
       <SiCss3 className="tech-icon" color="#1572B6" />, 
@@ -70,6 +71,7 @@ const projects = [
   {
     title: "FP-Cuisines",
     mainImage: fp13,
+    description: "An elegant restaurant website showcasing Filipino cuisine with beautiful food photography and an interactive menu. Features responsive design, smooth animations, and an intuitive user experience. Built with modern web technologies to create an engaging online presence for food enthusiasts.",
     tech: [
       <SiHtml5 className="tech-icon" color="#E44D26" />, 
       <SiCss3 className="tech-icon" color="#1572B6" />, 
@@ -82,6 +84,7 @@ const projects = [
   {
     title: "Old-Portfolio",
     mainImage: oldPortfolio,
+    description: "My first portfolio website showcasing my journey as a web developer. Features a clean, minimalist design with smooth scrolling effects and interactive elements. This project marked my entry into professional web development and demonstrates my growth in creating user-friendly interfaces.",
     tech: [ <SiHtml5 className="tech-icon" color="#E44D26" />, 
       <SiCss3 className="tech-icon" color="#1572B6" />, 
       <SiJavascript className="tech-icon" color="#F7DF1E" />,
@@ -94,6 +97,7 @@ const projects = [
   {
     title: "Sari-Sari-Store App",
     mainImage: sariSari,
+    description: "A digital solution for traditional Filipino neighborhood stores (Sari-Sari stores). Built with Angular and TypeScript, this application helps store owners manage inventory, track sales, and serve customers more efficiently. Features real-time updates and a user-friendly interface designed for small business operations.",
     tech: [<SiAngular className="tech-icon" color="#DD0031" />,
     <SiHtml5 className="tech-icon" color="#E44D26" />, 
     <SiCss3 className="tech-icon" color="#1572B6" />, 
@@ -105,6 +109,7 @@ const projects = [
   {
     title: "Research Conference Website",
     mainImage: researchConference,
+    description: "A comprehensive conference management platform designed for academic research events. Features speaker registration, agenda management, attendee registration, and real-time updates. Built with Angular and TypeScript, it provides a professional platform for organizing and promoting research conferences with modern UI/UX design.",
     tech: [<SiAngular className="tech-icon" color="#DD0031" />,
     <SiTypescript className="tech-icon" color="#3178C6" />,
     <SiHtml5 className="tech-icon" color="#E44D26" />,
@@ -116,6 +121,7 @@ const projects = [
   {
     title: "Mr-Assistance-App",
     mainImage: mrAssistance,
+    description: "A mobile assistance application built with Flutter and Firebase for real-time communication and support services. Features include live chat, location sharing, emergency assistance, and user authentication. This cross-platform app demonstrates modern mobile development practices with cloud integration and real-time functionality.",
     tech: [<SiFlutter className="tech-icon" color="#02569B" />, 
     <SiDart className="tech-icon" color="#0175C2" />, 
     <SiAndroidstudio className="tech-icon" color="#3DDC84" />, 
@@ -127,6 +133,7 @@ const projects = [
   {
     title: "Dental-Website",
     mainImage: dentalWebsite,
+    description: "A complete dental clinic website with appointment booking system, patient management, and service showcase. Built with PHP and MySQL, featuring user authentication, appointment scheduling, service information, and contact forms. This full-stack solution demonstrates database integration and server-side development skills.",
     tech: [<SiHtml5 className="tech-icon" color="#E44D26" />, 
     <SiCss3 className="tech-icon" color="#1572B6" />, 
     <SiJavascript className="tech-icon" color="#F7DF1E" />, 
@@ -142,16 +149,116 @@ const projects = [
 
 const Projects = () => {
   const [page, setPage] = useState(1);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [descriptionProject, setDescriptionProject] = useState<any>(null);
+  
   const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
   const startIdx = (page - 1) * PROJECTS_PER_PAGE;
   const endIdx = startIdx + PROJECTS_PER_PAGE;
   const pagedProjects = projects.slice(startIdx, endIdx);
 
+  const handleGalleryOpen = (project: any) => {
+    setSelectedProject(project);
+    setCurrentImageIndex(0);
+  };
+
+  const handleGalleryClose = () => {
+    setSelectedProject(null);
+    setCurrentImageIndex(0);
+  };
+
+  const handleDescriptionOpen = (project: any) => {
+    setDescriptionProject(project);
+  };
+
+  const handleDescriptionClose = () => {
+    setDescriptionProject(null);
+  };
+
+  const nextImage = () => {
+    if (selectedProject) {
+      setCurrentImageIndex((prev) => 
+        prev === selectedProject.galleryImages.length - 1 ? 0 : prev + 1
+      );
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedProject) {
+      setCurrentImageIndex((prev) => 
+        prev === 0 ? selectedProject.galleryImages.length - 1 : prev - 1
+      );
+    }
+  };
+
+  if (selectedProject) {
+    return (
+      <div className="projects-container">
+        <div className="gallery-view">
+          <div className="gallery-header">
+            <h2 className="gallery-title">{selectedProject.title} Gallery</h2>
+            <button className="gallery-close-btn" onClick={handleGalleryClose}>
+              ← Back to Projects
+            </button>
+          </div>
+          <div className="gallery-main">
+            <button className="gallery-nav-btn gallery-prev" onClick={prevImage}>
+              ‹
+            </button>
+            <div className="gallery-image-container">
+              <img 
+                src={selectedProject.galleryImages[currentImageIndex]} 
+                alt={`${selectedProject.title} - ${currentImageIndex + 1}`}
+                className="gallery-main-image"
+              />
+              <div className="gallery-counter">
+                {currentImageIndex + 1} of {selectedProject.galleryImages.length}
+              </div>
+            </div>
+            <button className="gallery-nav-btn gallery-next" onClick={nextImage}>
+              ›
+            </button>
+          </div>
+          <div className="gallery-thumbnails">
+            {selectedProject.galleryImages.map((img: string, idx: number) => (
+              <img
+                key={idx}
+                src={img}
+                alt={`Thumbnail ${idx + 1}`}
+                className={`gallery-thumbnail ${idx === currentImageIndex ? 'active' : ''}`}
+                onClick={() => setCurrentImageIndex(idx)}
+              />
+            ))}
+          </div>
+          <div className="gallery-project-info">
+            <div className="gallery-tech">
+              {selectedProject.tech}
+            </div>
+            <div className="gallery-links">
+              <a href={selectedProject.liveDemo} className="project-btn" target="_blank" rel="noopener noreferrer">
+                Live Demo
+              </a>
+              <a href={selectedProject.github} className="project-btn" target="_blank" rel="noopener noreferrer">
+                Github Repo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="projects-container">
       <div className="projects-grid">
         {pagedProjects.map((proj, idx) => (
-          <ProjectCard key={idx} {...proj} />
+          <ProjectCard 
+            key={idx} 
+            {...proj} 
+            onGalleryOpen={() => handleGalleryOpen(proj)}
+            onDescriptionOpen={() => handleDescriptionOpen(proj)}
+          />
         ))}
       </div>
       <div className="pagination">
@@ -167,6 +274,41 @@ const Projects = () => {
         ))}
         <button onClick={() => setPage(page + 1)} disabled={page === totalPages}>Next</button>
       </div>
+      
+      {descriptionProject && (
+        <div className="description-popup-overlay" onClick={handleDescriptionClose}>
+          <div className="description-popup" onClick={(e) => e.stopPropagation()}>
+            <div className="description-popup-header">
+              <h2 className="description-popup-title">{descriptionProject.title}</h2>
+              <button className="description-popup-close" onClick={handleDescriptionClose}>
+                ✕
+              </button>
+            </div>
+            <div className="description-popup-content">
+              <img 
+                src={descriptionProject.mainImage} 
+                alt={descriptionProject.title} 
+                className="description-popup-image"
+              />
+              <div className="description-popup-text">
+                <p className="description-popup-desc">{descriptionProject.description}</p>
+                <div className="description-popup-tech">
+                  <span className="tech-label">Technologies:</span>
+                  <div className="tech-icons">{descriptionProject.tech}</div>
+                </div>
+                <div className="description-popup-links">
+                  <a href={descriptionProject.liveDemo} className="popup-btn demo-btn" target="_blank" rel="noopener noreferrer">
+                    Live Demo
+                  </a>
+                  <a href={descriptionProject.github} className="popup-btn github-btn" target="_blank" rel="noopener noreferrer">
+                    GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

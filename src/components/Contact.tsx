@@ -29,144 +29,143 @@ interface Certificate {
   date: string;
 }
 
-const CERTS_PER_PAGE = 16;
+const CERTS_PER_PAGE = 6;
 
 
 const certificates: Certificate[] = [
   {
     id: 1,
-    title: "Certificate Title",
+    title: "Responsive Web Design",
     image: Cert1, 
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "freeCodeCamp",
+    date: "2024"
   },
   {
     id: 2,
-    title: "Certificate Title",
+    title: "Red Hat System Administration I",
     image: Cert2,
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "Red Hat",
+    date: "2022"
   },
   {
     id: 3,
-    title: "Certificate Title",
+    title: "ReactJS for Beginners",
     image: Cert3,
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "Simplilearn",
+    date: "2025"
   },
   {
     id: 4,
-    title: "Certificate Title",
+    title: "PSM in Cybersecurity",
     image: Cert4,
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "Holy Angel University",
+    date: "2025"
   },
   {
     id: 5,
-    title: "Certificate Title",
+    title: "TryHackMe Level 2",
     image: Cert5,
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "TryHackMe",
+    date: "2022"
   },
   {
     id: 6,
-    title: "Certificate Title",
+    title: "TryHackMe Level 1",
     image: Cert6,
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "TryHackMe",
+    date: "2022"
   },
   {
     id: 7,
-    title: "Certificate Title",
+    title: "JavaScript Essentials 2",
     image: Cert7,
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "Cisco",
+    date: "2025"
   },
   {
     id: 8,
-    title: "Certificate Title",
+    title: "JavaScript Essentials 1",
     image: Cert8,
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "Cisco",
+    date: "2024"
   },
   {
     id: 9,
-    title: "Certificate Title",
+    title: "Introduction to Cybersecurity",
     image: Cert9,
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "Cisco",
+    date: "2021"
   },
   {
     id: 10,
-    title: "Certificate Title",
+    title: "Introduction to Internet of Things",
     image: Cert10,
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "Cisco",
+    date: "2021"
   },
   {
     id: 11,
-    title: "Certificate Title",
+    title: "Google Analytics",
     image: Cert11,
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    issuer: "Google",
+    date: "2023"
   },
   {
     id: 12,
-    title: "Certificate Title",
-    image: Cert12, // Replace with your image path
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    title: "Get Started with Google Analytics",
+    image: Cert12,
+    issuer: "Google",
+    date: "2023"
   },
   {
     id: 13,
-    title: "Certificate Title",
-    image: Cert13, // Replace with your image path
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    title: "Git it Done",
+    image: Cert13,
+    issuer: "Holy Angel University",
+    date: "2024"
   },
   {
     id: 14,
-    title: "Certificate Title",
-    image: Cert14, // Replace with your image path
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    title: "GA4 Data and Read Reports",
+    image: Cert14,
+    issuer: "Google",
+    date: "2023"
   },
   {
     id: 15,
-    title: "Certificate Title",
-    image: Cert15, // Replace with your image path
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    title: "CyberOps Associate",
+    image: Cert15,
+    issuer: "LeetCode",
+    date: "2023"
   },
   {
     id: 16,
-    title: "Certificate Title",
-    image: Cert16, // Replace with your image path
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    title: "SEO Rank & Rise",
+    image: Cert16,
+    issuer: "Holy Angel University",
+    date: "2024"
   },
   {
     id: 17,
-    title: "Certificate Title",
-    image: Cert17, // Replace with your image path
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    title: "STS",
+    image: Cert17,
+    issuer: "Holy Angel University",
+    date: "2021"
   },
   {
     id: 18,
-    title: "Certificate Title",
-    image: Cert18, // Replace with your image path
-    issuer: "Issuing Organization",
-    date: "Date Received"
+    title: "Getting Started with ReactJS",
+    image: Cert18,
+    issuer: "Simplilearn",
+    date: "2025"
   },
   {
     id: 19,
-    title: "Certificate Title",
-    image: Cert19, // Replace with your image path
-    issuer: "Issuing Organization",
-    date: "Date Received"
-  },
-  // Add more certificates following the same format
+    title: "AWS Academy Graduate",
+    image: Cert19,
+    issuer: "AWS Academy",
+    date: "2024"
+  }
 ];
 
 
@@ -196,6 +195,13 @@ const Contact = () => {
         {pagedCertificates.map((cert) => (
           <div key={cert.id} className="certificate-card" onClick={() => handleCertClick(cert)}>
             <img src={cert.image} alt={cert.title} className="certificate-image" />
+            <div className="certificate-info">
+              <h3 className="certificate-title">{cert.title}</h3>
+              <div className="certificate-details">
+                <p className="certificate-issuer">{cert.issuer}</p>
+                <span className="certificate-date">{cert.date}</span>
+              </div>
+            </div>
           </div>
         ))}
         {Array.from({ length: placeholders }).map((_, idx) => (

@@ -21,7 +21,7 @@ const Sidebar = () => (
           <div className="sidebar__value">Pampanga, Philippines</div>
         </div>
       </a>
-      <a className="sidebar__info-item" href="mailto:archieew2custodio@gmail.com" target="_blank" rel="noopener noreferrer">
+      <a className="sidebar__info-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=archieew2custodio@gmail.com" target="_blank" rel="noopener noreferrer">
         <div className="sidebar__icon-box">
           <MdEmail className="sidebar__icon" />
         </div>
