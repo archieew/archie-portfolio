@@ -48,6 +48,12 @@ import dentalWebsite4 from "../assets/projects/DW/4.jpg";
 import dentalWebsite5 from "../assets/projects/DW/5.jpg";
 import dentalWebsite6 from "../assets/projects/DW/6.jpg";
 import dentalWebsite7 from "../assets/projects/DW/7.jpg";
+import rolePlayingGame from "../assets/projects/RPG/1.jpg";
+import rolePlayingGame2 from "../assets/projects/RPG/2.jpg";
+import rolePlayingGame3 from "../assets/projects/RPG/3.jpg";
+import rolePlayingGame4 from "../assets/projects/RPG/4.jpg";  
+import calorieCounter from "../assets/projects/CC/1.jpg";
+import randomBackgroundColorChanger from "../assets/projects/BCC/1.jpg";
 
 
 const PROJECTS_PER_PAGE = 6;
@@ -144,6 +150,48 @@ const projects = [
     github: "https://github.com/archieew/Dental_Website",
     galleryImages: [dentalWebsite, dentalWebsite2, dentalWebsite3, dentalWebsite4, dentalWebsite5, dentalWebsite6, dentalWebsite7],
     },
+    {
+      title: "Role-Playing-Game",
+      mainImage: rolePlayingGame,
+      description: "A modern, interactive web application that generates beautiful color combinations with multiple modes, animations, and advanced features. Built with vanilla HTML, CSS, and JavaScript.",
+      tech: [
+        <SiHtml5 className="tech-icon" color="#E44D26" />, 
+        <SiCss3 className="tech-icon" color="#1572B6" />, 
+        <SiJavascript className="tech-icon" color="#F7DF1E" />
+      ],
+      liveDemo: "https://archieew.github.io/Role-Playing-Game/",
+      github: "https://github.com/archieew/Random-Background-Color-Changer?tab=readme-ov-file",
+      galleryImages: [rolePlayingGame, rolePlayingGame2, rolePlayingGame3, rolePlayingGame4],
+    },
+    {
+      title: "Calorie-Counter",
+      mainImage: calorieCounter,
+      description: "A beautiful, modern web app for tracking your daily calories, macros, and exercise. Built with vanilla JavaScript, HTML, and CSS.",
+      tech: [
+        <SiHtml5 className="tech-icon" color="#E44D26" />, 
+        <SiCss3 className="tech-icon" color="#1572B6" />, 
+        <SiJavascript className="tech-icon" color="#F7DF1E" />,
+        <SiPhp className="tech-icon" color="#777BB4" />
+      ],
+      liveDemo: "https://archieew.github.io/Calorie-Counter/",
+      github: "https://github.com/archieew/Calorie-Counter",
+      galleryImages: [calorieCounter],
+    },
+    {
+      title: "Random-Background-Color-Changer",
+      mainImage: randomBackgroundColorChanger,
+      description: "A modern, interactive web application that generates beautiful color combinations with multiple modes, animations, and advanced features. Built with vanilla HTML, CSS, and JavaScript.",
+      tech: [
+        <SiHtml5 className="tech-icon" color="#E44D26" />, 
+        <SiCss3 className="tech-icon" color="#1572B6" />, 
+        <SiJavascript className="tech-icon" color="#F7DF1E" />
+      ],
+      liveDemo: "https://archieew.github.io/Random-Background-Color-Changer/",
+      github: "https://github.com/archieew/Random-Background-Color-Changer",
+      galleryImages: [randomBackgroundColorChanger],
+    },
+
+
 
 ];
 
