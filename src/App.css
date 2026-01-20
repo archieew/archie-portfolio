@@ -1,0 +1,132 @@
+/* Global App Styles - Mobile Responsive */
+
+/* ===== ENTRANCE ANIMATIONS ===== */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children animation */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.6s; }
+
+.stagger-children.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Layout Override (768px and below) */
+@media (max-width: 768px) {
+  /* Force column layout on mobile */
+  #root > div {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+    padding: 0.75rem !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-height: auto !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Sidebar full width on mobile */
+  #root > div > div:first-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: unset !important;
+    height: auto !important;
+    max-height: none !important;
+    position: relative !important;
+    top: 0 !important;
+    order: 1 !important;
+  }
+  
+  /* Main content full width on mobile */
+  #root > div > div:last-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: unset !important;
+    min-height: auto !important;
+    order: 2 !important;
+  }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+  #root > div {
+    padding: 0.5rem !important;
+    gap: 0.75rem !important;
+  }
+}
+
+/* Very Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  #root > div {
+    padding: 0.4rem !important;
+    gap: 0.5rem !important;
+  }
+}

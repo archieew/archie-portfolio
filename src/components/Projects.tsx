@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./styles/Projects.css";
 import ProjectCard from "./ProjectCard";
-import { SiHtml5, SiCss3, SiJavascript, SiSolidity, SiTypescript, SiAngular, SiFlutter, SiDart, SiAndroidstudio, SiFirebase, SiPhp, SiMysql, SiXampp } from "react-icons/si";
-import { FaWallet } from "react-icons/fa";
+import { SiHtml5, SiCss3, SiJavascript, SiSolidity, SiTypescript, SiAngular, SiFlutter, SiDart, SiAndroidstudio, SiFirebase, SiPhp, SiMysql, SiXampp, SiNextdotjs, SiTailwindcss, SiSupabase } from "react-icons/si";
+import { FaWallet, FaRobot } from "react-icons/fa";
 import bvc1 from "../assets/projects/BVC/1.jpg";
 import bvc2 from "../assets/projects/BVC/2.jpg";
 import bvc3 from "../assets/projects/BVC/3.jpg";
@@ -54,11 +54,29 @@ import rolePlayingGame3 from "../assets/projects/RPG/3.jpg";
 import rolePlayingGame4 from "../assets/projects/RPG/4.jpg";  
 import calorieCounter from "../assets/projects/CC/1.jpg";
 import randomBackgroundColorChanger from "../assets/projects/BCC/1.jpg";
+import rockPaperScissors from "../assets/projects/RPSg/1.jpg";
+import aiReviewer1 from "../assets/projects/BR/1.jpg";
+import aiReviewer2 from "../assets/projects/BR/2.jpg";
 
 
 const PROJECTS_PER_PAGE = 6;
 
 const projects = [
+  {
+    title: "AI-Reviewer-App",
+    mainImage: aiReviewer1,
+    description: "An AI-powered quiz generator that transforms your study materials into interactive quizzes. Upload PowerPoint, PDF, or document files and let Groq AI (Llama 3.3 70B) automatically generate multiple choice, identification, and true/false questions. Features include progress tracking, quiz history, and a beautiful modern UI.",
+    tech: [
+      <SiNextdotjs className="tech-icon" color="#000000" />,
+      <SiTypescript className="tech-icon" color="#3178C6" />,
+      <SiTailwindcss className="tech-icon" color="#06B6D4" />,
+      <SiSupabase className="tech-icon" color="#3ECF8E" />,
+      <FaRobot className="tech-icon" color="#F55036" />
+    ],
+    liveDemo: "https://ai-reviewer-app.vercel.app/",
+    github: "https://github.com/archieew/AI-Reviewer-App",
+    galleryImages: [aiReviewer1, aiReviewer2],
+  },
   {
     title: "Blockchain-Voting-App",
     mainImage: bvc2,
@@ -189,6 +207,19 @@ const projects = [
       liveDemo: "https://archieew.github.io/Random-Background-Color-Changer/",
       github: "https://github.com/archieew/Random-Background-Color-Changer",
       galleryImages: [randomBackgroundColorChanger],
+    },
+    {
+      title: "RockPaperScissors-Game",
+      mainImage: rockPaperScissors,
+      description: "A modern, interactive Rock, Paper, Scissors game built with HTML, CSS, and JavaScript. Play against the computer in a beautiful, responsive UI with animated hand images and smooth popups!",
+      tech: [
+        <SiHtml5 className="tech-icon" color="#E44D26" />, 
+        <SiCss3 className="tech-icon" color="#1572B6" />, 
+        <SiJavascript className="tech-icon" color="#F7DF1E" />
+      ],
+      liveDemo: "https://archieew.github.io/Random-Background-Color-Changer/",
+      github: "https://github.com/archieew/RockPaperScissors-Game",
+      galleryImages: [rockPaperScissors],
     },
 
 

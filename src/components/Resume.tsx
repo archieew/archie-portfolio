@@ -2,6 +2,7 @@ import "./styles/Resume.css";
 import { FaGraduationCap, FaBriefcase, FaCalendar, FaMapMarkerAlt, FaBuilding } from "react-icons/fa";
 import hauLogo from "../assets/logos/HAU.png";
 import itsquareLogo from "../assets/logos/ITS.jpg";
+import crmLogo from "../assets/logos/CRM.jpg";
 
 const Resume = () => {
   return (
@@ -46,6 +47,7 @@ const Resume = () => {
           <h2>Professional Experiences</h2>
         </div>
         <div className="timeline-container">
+          {/* IT Squarehub */}
           <div className="resume-card">
             <div className="card-logo">
               <img src={itsquareLogo} alt="IT Squarehub" />
@@ -75,6 +77,39 @@ const Resume = () => {
                   <li>Edit and retouch photos to enhance visual appeal and ensure quality</li>
                   <li>Work closely with marketing, product, and development teams to ensure cohesive project execution</li>
                   <li>Design engaging visuals for email marketing, web content, and social media campaigns</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* CRM Online Australia */}
+          <div className="resume-card">
+            <div className="card-logo">
+              <img src={crmLogo} alt="CRM Online Australia" />
+            </div>
+            <div className="card-content">
+              <h3 className="primary-title">CRM Online Australia Pty Ltd</h3>
+              <p className="secondary-title">Junior Software Developer</p>
+              <div className="badge-container">
+                <div className="info-badge">
+                  <FaBuilding className="badge-icon" />
+                  Full-time
+                </div>
+                <div className="info-badge">
+                  <FaMapMarkerAlt className="badge-icon" />
+                  Remote
+                </div>
+                <div className="info-badge">
+                  <FaCalendar className="badge-icon" />
+                  June 2025 - November 2025
+                </div>
+              </div>
+              <div className="responsibilities">
+                <ul>
+                  <li>Designed, debugged, and optimized features in Fieldmagic</li>
+                  <li>Developed AI-powered tools for summarizing emails, invoices, quotes, and professional cover letters efficiently</li>
+                  <li>Contributed to building AI-powered features, collaborating with senior developers to integrate machine learning into production systems</li>
+                  <li>Collaborated with seniors and the CEO for feature updates and planning</li>
                 </ul>
               </div>
             </div>

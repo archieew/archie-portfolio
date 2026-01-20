@@ -42,10 +42,10 @@ const certificates: Certificate[] = [
   },
   {
     id: 2,
-    title: "Red Hat System Administration I",
-    image: Cert2,
-    issuer: "Red Hat",
-    date: "2022"
+    title: "JavaScript Essentials 1",
+    image: Cert8,
+    issuer: "Cisco",
+    date: "2024"
   },
   {
     id: 3,
@@ -56,38 +56,38 @@ const certificates: Certificate[] = [
   },
   {
     id: 4,
-    title: "PSM in Cybersecurity",
-    image: Cert4,
-    issuer: "Holy Angel University",
-    date: "2025"
-  },
-  {
-    id: 5,
-    title: "TryHackMe Level 2",
-    image: Cert5,
-    issuer: "TryHackMe",
-    date: "2022"
-  },
-  {
-    id: 6,
-    title: "TryHackMe Level 1",
-    image: Cert6,
-    issuer: "TryHackMe",
-    date: "2022"
-  },
-  {
-    id: 7,
     title: "JavaScript Essentials 2",
     image: Cert7,
     issuer: "Cisco",
     date: "2025"
   },
   {
-    id: 8,
-    title: "JavaScript Essentials 1",
-    image: Cert8,
-    issuer: "Cisco",
+    id: 5,
+    title: "AWS Academy Graduate",
+    image: Cert19,
+    issuer: "AWS Academy",
     date: "2024"
+  },
+  {
+    id: 6,
+    title: "Getting Started with ReactJS",
+    image: Cert18,
+    issuer: "Simplilearn",
+    date: "2025"
+  },
+  {
+    id: 7,
+    title: "PSM in Cybersecurity",
+    image: Cert4,
+    issuer: "Holy Angel University",
+    date: "2025"
+  },
+  {
+    id: 8,
+    title: "Red Hat System Administration I",
+    image: Cert2,
+    issuer: "Red Hat",
+    date: "2022"
   },
   {
     id: 9,
@@ -154,17 +154,17 @@ const certificates: Certificate[] = [
   },
   {
     id: 18,
-    title: "Getting Started with ReactJS",
-    image: Cert18,
-    issuer: "Simplilearn",
-    date: "2025"
+    title: "TryHackMe Level 1",
+    image: Cert6,
+    issuer: "TryHackMe",
+    date: "2022"
   },
   {
     id: 19,
-    title: "AWS Academy Graduate",
-    image: Cert19,
-    issuer: "AWS Academy",
-    date: "2024"
+    title: "TryHackMe Level 2",
+    image: Cert5,
+    issuer: "TryHackMe",
+    date: "2022"
   }
 ];
 

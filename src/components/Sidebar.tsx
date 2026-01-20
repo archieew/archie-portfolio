@@ -3,12 +3,20 @@ import profileImg from "../assets/profile.jpg";
 import { FaGithub, FaMapMarkerAlt, FaLinkedin, FaGlobe, FaBriefcase, FaTwitter, FaSuitcase, FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import logo from "../assets/Asset 1.png";
+import TypingText from "./TypingText";
+
+const roles = [
+  "Software Engineer",
+  "Full-stack Developer"
+];
 
 const Sidebar = () => (
   <aside className="sidebar">
     <img src={profileImg} alt="Profile" className="sidebar__avatar" />
     <h2 className="sidebar__name">Archie D. Custodio</h2>
-    <div className="sidebar__tagline">Building until Scale is an Issue 🚀</div>
+    <div className="sidebar__tagline">
+      <TypingText texts={roles} typingSpeed={80} deletingSpeed={40} pauseDuration={2500} />
+    </div>
     <hr className="sidebar__divider" />
 
     <div className="sidebar__info">
@@ -72,7 +80,7 @@ const Sidebar = () => (
 
     <div className="sidebar__footer">
       <div style={{ display: "flex", alignItems: "center", gap: "0.5em", justifyContent: "center" }}>
-        <span>© 2025</span>
+        <span>© 2026</span>
         <img src={logo} alt="Logo" style={{ height: "1.2em", verticalAlign: "middle", filter: "invert(54%) sepia(94%) saturate(484%) hue-rotate(110deg) brightness(92%) contrast(91%)" }} />
       </div>
     </div>
