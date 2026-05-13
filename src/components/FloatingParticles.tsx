@@ -8,8 +8,8 @@ const FloatingParticles = () => {
     const container = containerRef.current;
     if (!container) return;
 
-    // Create particles
-    const particleCount = 50;
+    // Create particles (reduced for performance)
+    const particleCount = 15;
     const particles: HTMLDivElement[] = [];
 
     for (let i = 0; i < particleCount; i++) {
