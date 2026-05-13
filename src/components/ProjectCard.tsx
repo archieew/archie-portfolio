@@ -1,4 +1,4 @@
-import { type JSX } from "react";
+import { useState, type JSX } from "react";
 
 type ProjectCardProps = {
   title: string;
@@ -12,10 +12,20 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ title, mainImage, tech, liveDemo, github, onGalleryOpen, onDescriptionOpen }: ProjectCardProps) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <div className="project-card" onClick={onDescriptionOpen}>
-      <img src={mainImage} alt={title + " screenshot"} className="project-main-image" />
+      <div className="project-image-wrapper">
+        {!imageLoaded && <div className="image-skeleton" />}
+        <img 
+          src={mainImage} 
+          alt={title + " screenshot"} 
+          className={`project-main-image ${imageLoaded ? 'loaded' : ''}`}
+          loading="lazy"
+          onLoad={() => setImageLoaded(true)}
+        />
+      </div>
       <h3 className="project-title">{title}</h3>
       <div className="project-tech">{tech}</div>
       <hr className="project-divider" />
@@ -28,4 +38,4 @@ const ProjectCard = ({ title, mainImage, tech, liveDemo, github, onGalleryOpen, 
   );
 };
 
-export default ProjectCard; 
+export default ProjectCard;

@@ -1,6 +1,7 @@
 import "./styles/About.css";
 import { useState } from "react";
-import { SiJavascript, SiHtml5, SiCss3, SiDart, SiAngular, SiReact, SiFlutter, SiBootstrap, SiWordpress, SiMongodb, SiMysql, SiPhp, SiFlask, SiNodedotjs, SiExpress, SiVite, SiTailwindcss, SiAdobephotoshop, SiAdobepremierepro, SiAdobeillustrator, SiCanva, SiFigma, SiGit, SiGithub, SiLaravel, SiLumen, SiNextdotjs, SiDocker, SiTypescript, SiPostgresql, SiJsonwebtokens } from "react-icons/si";
+import { SiJavascript, SiHtml5, SiCss3, SiDart, SiAngular, SiReact, SiFlutter, SiBootstrap, SiWordpress, SiMongodb, SiMysql, SiPhp, SiFlask, SiNodedotjs, SiExpress, SiVite, SiTailwindcss, SiAdobephotoshop, SiAdobepremierepro, SiAdobeillustrator, SiCanva, SiFigma, SiGit, SiGithub, SiLaravel, SiLumen, SiNextdotjs, SiDocker, SiTypescript, SiPostgresql, SiJsonwebtokens, SiWebflow, SiTrello } from "react-icons/si";
+import { FaDatabase } from "react-icons/fa";
 import { TbApi } from "react-icons/tb";
 import resumePDF from "../assets/Custodio_Archie_Resume.pdf";
 import TypingText from "./TypingText";
@@ -31,11 +32,9 @@ const About = () => {
     <div className="about-container">
       <div className="about-intro">
         <div className="intro-text">
-          Hi, I am <span className="highlight-name">Archie</span> - a Software Engineer / Full Stack Developer tech entrepreneur who thrives on solving complex problems and building meaningful solutions.
+          Hi, I am <span className="highlight-name">Archie</span> - a Software Engineer / Full Stack Developer who thrives on solving complex problems and building meaningful solutions.
           <br /><br />
-          My expertise spans from full-stack development, backend infrastructure, cloud systems, API design, and software engineering. I enjoy the challenges of bringing ideas to life, leveling up my coding skills through practice and consistency, and understanding complex systems and improving debugging skills. I am also interested in building meaningful projects that challenge me.
-          <br /><br />
-          Beyond coding, I'm passionate about exploring other tech spaces and cultures. I'm continuously leveling up my skills and exploring AI advancements whenever I have free time.
+          My expertise spans full-stack development, backend infrastructure, cloud systems, API design, and software engineering. I enjoy bringing ideas to life, leveling up my coding skills, and building meaningful projects that challenge me.
           <br /><br />
           <span className="call-to-action">Let's connect - I'm always up for learning new experiences and ideas about technology.</span>
         </div>
@@ -112,6 +111,9 @@ const About = () => {
             <SiFigma title="Figma" />
             <SiGit title="Git" />
             <SiGithub title="Github" />
+            <SiWebflow title="Webflow" />
+            <FaDatabase title="CMS" />
+            <SiTrello title="Trello" />
             {/* Duplicate set for seamless infinite loop */}
             <SiAdobephotoshop title="Adobe Photoshop" />
             <SiAdobepremierepro title="Adobe Premiere" />
@@ -120,6 +122,9 @@ const About = () => {
             <SiFigma title="Figma" />
             <SiGit title="Git" />
             <SiGithub title="Github" />
+            <SiWebflow title="Webflow" />
+            <FaDatabase title="CMS" />
+            <SiTrello title="Trello" />
             {/* Third set to fill visible area */}
             <SiAdobephotoshop title="Adobe Photoshop" />
             <SiAdobepremierepro title="Adobe Premiere" />
@@ -128,6 +133,9 @@ const About = () => {
             <SiFigma title="Figma" />
             <SiGit title="Git" />
             <SiGithub title="Github" />
+            <SiWebflow title="Webflow" />
+            <FaDatabase title="CMS" />
+            <SiTrello title="Trello" />
             {/* Fourth set for smooth transition */}
             <SiAdobephotoshop title="Adobe Photoshop" />
             <SiAdobepremierepro title="Adobe Premiere" />
@@ -136,6 +144,9 @@ const About = () => {
             <SiFigma title="Figma" />
             <SiGit title="Git" />
             <SiGithub title="Github" />
+            <SiWebflow title="Webflow" />
+            <FaDatabase title="CMS" />
+            <SiTrello title="Trello" />
           </div>
         </div>
       </div>
@@ -155,7 +166,7 @@ const About = () => {
         <div className="popup-overlay">
           <div className="popup-message">
             <div className="popup-content">
-              <h3>Thank You! 🎉</h3>
+              <h3>Thank You!</h3>
               <p>Thank you for downloading my resume!</p>
             </div>
           </div>

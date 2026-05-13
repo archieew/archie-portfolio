@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import TopNav from "./components/TopNav";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
 import LoadingScreen from "./components/LoadingScreen";
@@ -60,7 +61,8 @@ function App() {
           <div className={`${styles.pageContent} ${isTransitioning ? styles.fadeOut : styles.fadeIn}`}>
             {active === "About" && <About />}
             {active === "Projects" && <Projects />}
-            {active === "Certificates" && <Contact />}
+            {active === "Certificates" && <Certificates />}
+            {active === "Contact" && <Contact />}
             {active === "Resume" && <Resume />}
           </div>
         </div>

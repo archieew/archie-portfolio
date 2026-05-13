@@ -3,6 +3,7 @@ import { FaGraduationCap, FaBriefcase, FaCalendar, FaMapMarkerAlt, FaBuilding } 
 import hauLogo from "../assets/logos/HAU.png";
 import itsquareLogo from "../assets/logos/ITS.jpg";
 import crmLogo from "../assets/logos/CRM.jpg";
+import frostLogo from "../assets/logos/FROST.png";
 
 const Resume = () => {
   return (
@@ -14,7 +15,7 @@ const Resume = () => {
           <h2>Education</h2>
         </div>
         <div className="timeline-container">
-          <div className="resume-card">
+          <a href="https://www.hau.edu.ph/" target="_blank" rel="noopener noreferrer" className="resume-card clickable">
             <div className="card-logo">
               <img src={hauLogo} alt="Holy Angel University" />
             </div>
@@ -36,7 +37,7 @@ const Resume = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -48,7 +49,7 @@ const Resume = () => {
         </div>
         <div className="timeline-container">
           {/* IT Squarehub */}
-          <div className="resume-card">
+          <a href="https://www.linkedin.com/company/itsquarehub/about/" target="_blank" rel="noopener noreferrer" className="resume-card clickable">
             <div className="card-logo">
               <img src={itsquareLogo} alt="IT Squarehub" />
             </div>
@@ -80,10 +81,10 @@ const Resume = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </a>
 
           {/* CRM Online Australia */}
-          <div className="resume-card">
+          <a href="https://www.crmonline.com.au/" target="_blank" rel="noopener noreferrer" className="resume-card clickable">
             <div className="card-logo">
               <img src={crmLogo} alt="CRM Online Australia" />
             </div>
@@ -113,7 +114,42 @@ const Resume = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </a>
+
+          {/* Frost Design & Consulting Group */}
+          <a href="https://www.frostdesigngroup.com/" target="_blank" rel="noopener noreferrer" className="resume-card clickable">
+            <div className="card-logo">
+              <img src={frostLogo} alt="Frost Design & Consulting Group" />
+            </div>
+            <div className="card-content">
+              <h3 className="primary-title">Frost Design & Consulting Group Inc.</h3>
+              <p className="secondary-title">Frontend Developer II</p>
+              <div className="badge-container">
+                <div className="info-badge">
+                  <FaBuilding className="badge-icon" />
+                  Full-time
+                </div>
+                <div className="info-badge">
+                  <FaMapMarkerAlt className="badge-icon" />
+                  Pasig, Philippines · Remote
+                </div>
+                <div className="info-badge">
+                  <FaCalendar className="badge-icon" />
+                  Feb 2026 - Present
+                </div>
+              </div>
+              <div className="responsibilities">
+                <ul>
+                  <li>Develop and maintain responsive websites using Webflow</li>
+                  <li>Collaborate with senior developers and cross-functional frontend teams to deliver high-quality web solutions</li>
+                  <li>Transform Figma designs into fully functional, pixel-perfect websites</li>
+                  <li>Utilize CMS features to manage and structure dynamic website content</li>
+                  <li>Ensure websites are optimized for performance, accessibility, and user experience</li>
+                  <li>Implement modern design and development best practices to create visually appealing and high-performing websites</li>
+                </ul>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
