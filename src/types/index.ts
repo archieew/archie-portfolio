@@ -1,3 +1,5 @@
+import type { ReactElement } from "react";
+
 // Project categories
 export type ProjectCategory = "All" | "Web" | "Mobile" | "AI" | "Games";
 
@@ -6,7 +8,7 @@ export interface Project {
   title: string;
   mainImage: string;
   description: string;
-  tech: JSX.Element[];
+  tech: ReactElement[];
   liveDemo: string;
   github: string;
   galleryImages: string[];
